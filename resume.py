@@ -1,5 +1,4 @@
 # !pip install docx2txtpip
-# GOOD WORK NEHA
 import docx2txt
 # Minimum resumes = 1 -> us case me tumhara best match b resume1 hoga
 BestCandidate = "myResume1"
