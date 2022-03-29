@@ -8,7 +8,7 @@ CORS(app)
 @app.route("/")
 def resumeScanner():
     BestCandidate = "myResume1"
-    currentBest = 0;
+    currentBest = 0; 
     for i in range(1,4):
         job_description = docx2txt.process('container/jd.docx')
         myResume = docx2txt.process(f'container/myResume{i}.docx')
@@ -22,8 +22,6 @@ def resumeScanner():
             currentBest =mat[1][0]*100
             BestCandidate = f"myResume{i}"
     return jsonify(mat=str(mat[1][0]*100),BestCandidate=BestCandidate)
-
-
 
 if __name__ =="__main__":
     app.run(debug=True)

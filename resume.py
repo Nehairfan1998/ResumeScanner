@@ -1,9 +1,4 @@
-from flask import Flask
-app = Flask(__name__)
 import docx2txt
-@app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
 # Minimum resumes = 1 -> us case me tumhara best match b resume1 hoga
 BestCandidate = "myResume1"
 # currentBest bole toh -> worst compatibilty is 0
@@ -33,4 +28,6 @@ for i in range(1,4):
     print('Resume Matches by: '+  str(mat[1][0]*100) + '%')
 print(f"Best candidate award goes to {BestCandidate}")
 
-# to run python resume.py
+# to run python resume.py 
+
+
