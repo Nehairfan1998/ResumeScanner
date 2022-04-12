@@ -7,9 +7,10 @@ app = Flask(__name__)
 CORS(app)
 @app.route("/")
 def resumeScanner():
-    BestCandidate = "myResume1"
+    
+    BestCandidate = ""
     currentBest = 0; 
-    for i in range(1,4):
+    for i in range(1,5):
         job_description = docx2txt.process('container/jd.docx')
         myResume = docx2txt.process(f'container/myResume{i}.docx')
         content = [job_description,myResume]
